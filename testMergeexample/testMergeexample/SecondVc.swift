@@ -7,13 +7,17 @@
 
 import UIKit
 
-class SecondVc: UIViewController {
+final class SecondVc: UIViewController {
     
-    let label = UILabel()
+    private let label = UILabel()
     var name: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+    }
+
+    private func configure() {
         view.backgroundColor = .green
         title = "Второй экран"
         
