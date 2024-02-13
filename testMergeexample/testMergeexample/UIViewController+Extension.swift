@@ -9,7 +9,7 @@ import UIKit
 
 extension UIViewController {
     
-    func printTitle() {
-        print(self.title)
+    func getMainTitle() -> String? {
+        "Это \(self.title ?? "")"
     }
 }
