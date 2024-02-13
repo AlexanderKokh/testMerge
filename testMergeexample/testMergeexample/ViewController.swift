@@ -7,19 +7,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+    }
+    
+    private func configure() {
         view.backgroundColor = .lightGray
-        
         let button = UIButton(frame: .init(x: view.frame.midX - 50, y: view.frame.midY - 30, width: 100, height: 30))
         button.setTitle("Нажать", for: .normal)
         button.addTarget(self, action: #selector(buttonTap(_:)), for: .touchUpInside)
         view.addSubview(button)
     }
     
-    @objc func buttonTap(_ sender: UIButton) {
+    @objc private func buttonTap(_ sender: UIButton) {
         print("Кнопка была нажата")
         let firstVC = FirstVC()
         present(firstVC, animated: true)

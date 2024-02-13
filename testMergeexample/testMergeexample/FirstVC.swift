@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstVC: UIViewController {
+final class FirstVC: UIViewController {
     
     lazy var label: UILabel = {
         let label = UILabel()
@@ -28,9 +28,12 @@ class FirstVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+          configure()
+      }
+    
+    private func configure() {
         view.backgroundColor = .white
         title = "Первый экран"
-        
         view.addSubview(label)
         view.addSubview(greetingLabel)
     }
